@@ -10,6 +10,7 @@ The pipeline is modular, reproducible, and includes automatic evaluation with co
 - Demonstrate understanding of data preprocessing, model training, and evaluation metrics
 
 ## Project Structure
+```bash
 CodeAlpha_disease-prediction-ml/
 │
 ├── data/ # Dataset (raw or processed)
@@ -29,7 +30,7 @@ CodeAlpha_disease-prediction-ml/
 ├── experiments/ # Experiment logs (optional)
 ├── requirements.txt # Required Python packages
 └── README.md # This file
-
+```
 
 ## Installation
 
@@ -76,9 +77,9 @@ This will generate:
 
 ## Reproducibility
 
-. Random seed is fixed using src/utils/seed.py
-. Dependencies listed in requirements.txt
-. Modular pipeline ensures consistent results across machines
+- Random seed is fixed using src/utils/seed.py
+- Dependencies listed in requirements.txt
+- Modular pipeline ensures consistent results across machines
 
 ## Contact
 GitHub: [NawresFekih](https://github.com/NawresFekih)
