@@ -1,66 +1,85 @@
-🧬 Breast Cancer Prediction Project
+# Breast Cancer Prediction with XGBoost
 
-🎯 Objective
+## Description
+This project implements a machine learning pipeline to predict breast cancer using the scikit-learn breast cancer dataset. 
+The pipeline is modular, reproducible, and includes automatic evaluation with confusion matrix and ROC curve.
 
-Predict whether a breast tumor is benign or malignant based on diagnostic medical features, using supervised machine learning techniques.
+## Project Goal
+- Build a reproducible ML pipeline for breast cancer prediction
+- Use best practices: modular code, environment setup, and evaluation
+- Demonstrate understanding of data preprocessing, model training, and evaluation metrics
 
-
-
-🔧 Models Used
-
-Logistic Regression
-
-
-
-Support Vector Machine (SVM)
-
-
-
-Random Forest
-
-
-
-XGBoost
-
-
-
-📁 Project Folder Content
-
-breast\_cancer\_prediction.ipynb: Complete Jupyter notebook
-
-
-
-xgboost.pkl: Final saved model (XGBoost)
+## Project Structure
+CodeAlpha_disease-prediction-ml/
+│
+├── data/ # Dataset (raw or processed)
+├── src/ # Source code
+│ ├── data/ # Preprocessing
+│ │ └── preprocess.py
+│ ├── models/ # Training and evaluation
+│ │ ├── train.py
+│ │ └── evaluate.py
+│ └── utils/ # Utility functions
+│ └── seed.py
+├── notebooks/ # Experimental notebook
+├── outputs/ # Generated outputs
+│ ├── saved_models/ # Trained model files
+│ └── figures/ # Confusion matrix and ROC curve
+├── configs/ # Config files (optional)
+├── experiments/ # Experiment logs (optional)
+├── requirements.txt # Required Python packages
+└── README.md # This file
 
 
+## Installation
 
-scaler.pkl: StandardScaler object for preprocessing
+1. Clone the repository:
+```bash
+git clone https://github.com/NawresFekih/CodeAlpha_disease-prediction-ml.git
+cd CodeAlpha_disease-prediction-ml
+``` 
 
+2. Create and activate a virtual environment:
+```bash
+python -m venv cfeproj
+# Windows
+cfeproj\Scripts\activate
+# Linux / macOS
+source cfeproj/bin/activate
+```
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+## Usage
 
+Train model
+```bash
+python -m src.models.train
+```
+Evaluate model
+```bash
+python -m src.models.evaluate
+```
 
-confusion\_matrices.png: Confusion matrix visualizations
+This will generate:
 
+- Trained model in outputs/saved_models/
+- Confusion matrix and ROC curve in outputs/figures/
 
+## Expected Results
 
-feature\_importance.png: Feature importance from XGBoost
+- Accuracy: ~0.97
+- F1 Score: ~0.96
+- Confusion matrix saved as outputs/figures/confusion_matrix.png
+- ROC curve saved as outputs/figures/roc_curve.png (AUC ~0.97)
 
+## Reproducibility
 
+. Random seed is fixed using src/utils/seed.py
+. Dependencies listed in requirements.txt
+. Modular pipeline ensures consistent results across machines
 
-README.md: Project description
-
-
-
-requirements.txt: List of Python dependencies
-
-
-
-✅ Result
-
-XGBoost was selected as the best model due to its excellent ROC AUC score, high precision and recall, and ability to rank the most relevant medical features.
-
-The data was standardized using StandardScaler, and all models were evaluated using classification reports and confusion matrices.
-
-
-
-Developed by Nawres Fekih – Machine Learning Internship Project 💼
-
+## Contact
+GitHub: [NawresFekih](https://github.com/NawresFekih)
+Email: nawresfekih3@gmail.com
