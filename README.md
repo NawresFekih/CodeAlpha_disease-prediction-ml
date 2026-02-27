@@ -1,13 +1,21 @@
 # Breast Cancer Prediction with XGBoost
 
 ## Description
-This project implements a machine learning pipeline to predict breast cancer using the scikit-learn breast cancer dataset. 
-The pipeline is modular, reproducible, and includes automatic evaluation with confusion matrix and ROC curve.
+This project implements a reproducible machine learning pipeline to predict breast cancer. 
+It uses the scikit-learn breast cancer dataset and compares multiple models including Logistic Regression, SVM, Random Forest, and XGBoost (best model).  
+
+The pipeline includes:
+- Data preprocessing (scaling, train/test split)
+- Model training and evaluation
+- Error Analysis (False Positives / False Negatives)
+- Threshold tuning to reduce critical false negatives
+- Feature importance analysis
 
 ## Project Goal
 - Build a reproducible ML pipeline for breast cancer prediction
-- Use best practices: modular code, environment setup, and evaluation
-- Demonstrate understanding of data preprocessing, model training, and evaluation metrics
+- Demonstrate understanding of data preprocessing, model training, evaluation, and error analysis
+- Highlight critical insights for medical applications (e.g., reducing false negatives)
+- Follow best practices: modular code, environment setup, and reproducible results
 
 ## Project Structure
 ```bash
